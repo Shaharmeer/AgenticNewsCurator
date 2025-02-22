@@ -1,0 +1,23 @@
+[project]
+name = "agenticnewscurator"
+version = "0.1.0"
+description = "AgenticNewsCurator using crewAI"
+authors = [{ name = "Shaharmeer", email = "shaharmeer01@gmail.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.102.0,<1.0.0"
+]
+
+[project.scripts]
+agenticnewscurator = "agenticnewscurator.main:run"
+run_crew = "agenticnewscurator.main:run"
+train = "agenticnewscurator.main:train"
+replay = "agenticnewscurator.main:replay"
+test = "agenticnewscurator.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
